@@ -1,3 +1,4 @@
+import 'package:expance_manegment/menu_class.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -17,13 +18,14 @@ List exp = [
     "amount": 500
   }
 ];
+//MyDrawer he function dusarya class madhe aahe mahnun tyala aananya sathi tya
+// class cha object banvala
 
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.menu),
         title: Text(
           "June 2022",
           style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.w500),
@@ -31,6 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 19),
+            //search  Icon
             child: Image.asset(
               "img/Search_alt.png",
               height: 24,
@@ -140,6 +143,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      drawer: const MyDrawerClass(),
     );
   }
 
@@ -197,6 +201,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                 borderRadius: BorderRadius.circular(5),
                               ),
                               hintText: " Date",
+                              contentPadding:
+                                  const EdgeInsets.only(top: 5, left: 7),
                               hintStyle: GoogleFonts.poppins()),
                         ),
                       ),
@@ -220,6 +226,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: TextFormField(
                           keyboardType: TextInputType.number,
                           decoration: InputDecoration(
+                              contentPadding:
+                                  const EdgeInsets.only(top: 5, left: 7),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(5),
                               ),
@@ -247,6 +255,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: TextFormField(
                           keyboardType: TextInputType.name,
                           decoration: InputDecoration(
+                              contentPadding:
+                                  const EdgeInsets.only(top: 5, left: 7),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(5),
                               ),
@@ -274,6 +284,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: TextFormField(
                           keyboardType: TextInputType.name,
                           decoration: InputDecoration(
+                              contentPadding:
+                                  const EdgeInsets.only(top: 5, left: 7),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(5),
                               ),

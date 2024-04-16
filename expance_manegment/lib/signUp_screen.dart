@@ -18,7 +18,7 @@ class _LoginPageState extends State<SignUp> {
       body: SingleChildScrollView(
         child: Padding(
           padding:
-              const EdgeInsets.only(left: 42, top: 86, right: 38, bottom: 50),
+              const EdgeInsets.only(left: 42, top: 80, right: 38, bottom: 0),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -162,7 +162,7 @@ class _LoginPageState extends State<SignUp> {
               ),
               //  const Spacer(),
               Padding(
-                padding: const EdgeInsets.only(left: 40, top: 150),
+                padding: const EdgeInsets.only(left: 40, top: 100),
                 child: GestureDetector(
                   onTap: () {
                     Navigator.push(context,

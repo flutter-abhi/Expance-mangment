@@ -1,6 +1,5 @@
-import 'package:expance_manegment/login_screen.dart';
+import 'package:expance_manegment/view/login_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class FlashScreen extends StatelessWidget {

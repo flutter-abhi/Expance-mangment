@@ -1,24 +1,25 @@
-import 'package:expance_manegment/home.dart';
-import 'package:expance_manegment/login_screen.dart';
+import 'package:expance_manegment/view/home.dart';
+import 'package:expance_manegment/view/signUp_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
+
 import 'package:google_fonts/google_fonts.dart';
 
-class SignUp extends StatefulWidget {
-  const SignUp({super.key});
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
 
   @override
-  State<SignUp> createState() => _LoginPageState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _LoginPageState extends State<SignUp> {
+class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
           padding:
-              const EdgeInsets.only(left: 42, top: 80, right: 38, bottom: 0),
+              const EdgeInsets.only(left: 42, top: 86, right: 38, bottom: 50),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -28,7 +29,7 @@ class _LoginPageState extends State<SignUp> {
                 child: Image.asset("img/icon.png"),
               ),
               Text(
-                "Create your Account",
+                "Login to your Account",
                 style: GoogleFonts.poppins(
                     fontSize: 16, fontWeight: FontWeight.w500),
               ),
@@ -52,32 +53,7 @@ class _LoginPageState extends State<SignUp> {
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8),
                             borderSide: BorderSide.none),
-                        hintText: "name",
-                        hintStyle: GoogleFonts.poppins()),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 25.0),
-                child: Container(
-                  height: 50,
-                  // width: 280,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(8),
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Color.fromRGBO(0, 0, 0, 0.15),
-                          offset: Offset(0, 3),
-                          blurRadius: 10,
-                        )
-                      ]),
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(8),
-                            borderSide: BorderSide.none),
-                        hintText: " Username",
+                        hintText: "   Username",
                         hintStyle: GoogleFonts.poppins()),
                   ),
                 ),
@@ -98,38 +74,11 @@ class _LoginPageState extends State<SignUp> {
                         )
                       ]),
                   child: TextFormField(
-                    keyboardType: TextInputType.number,
                     decoration: InputDecoration(
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8),
                             borderSide: BorderSide.none),
-                        hintText: " Password",
-                        hintStyle: GoogleFonts.poppins()),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 25.0),
-                child: Container(
-                  height: 50,
-                  // width: 280,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(8),
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Color.fromRGBO(0, 0, 0, 0.15),
-                          offset: Offset(0, 3),
-                          blurRadius: 10,
-                        )
-                      ]),
-                  child: TextFormField(
-                    keyboardType: TextInputType.number,
-                    decoration: InputDecoration(
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(8),
-                            borderSide: BorderSide.none),
-                        hintText: " Confirm Password",
+                        hintText: "password",
                         hintStyle: GoogleFonts.poppins()),
                   ),
                 ),
@@ -151,7 +100,7 @@ class _LoginPageState extends State<SignUp> {
                       borderRadius: BorderRadius.circular(8)),
                   child: Center(
                     child: Text(
-                      "Sign up",
+                      "Sign in",
                       style: GoogleFonts.poppins(
                           color: Colors.white,
                           fontSize: 15,
@@ -162,16 +111,16 @@ class _LoginPageState extends State<SignUp> {
               ),
               //  const Spacer(),
               Padding(
-                padding: const EdgeInsets.only(left: 40, top: 100),
+                padding: const EdgeInsets.only(left: 40, top: 250),
                 child: GestureDetector(
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return const LoginPage();
+                      return const SignUp();
                     }));
                   },
                   child: Text(
-                    "Already have an account? Sign In",
+                    "Don’t have an account? Sign up",
                     style: GoogleFonts.poppins(
                         fontSize: 12, fontWeight: FontWeight.w400),
                   ),

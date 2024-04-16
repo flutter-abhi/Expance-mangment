@@ -1,4 +1,4 @@
-import 'package:expance_manegment/flash_screen.dart';
+import 'package:expance_manegment/view/flash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

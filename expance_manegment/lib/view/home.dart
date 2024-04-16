@@ -1,4 +1,4 @@
-import 'package:expance_manegment/menu_class.dart';
+import 'package:expance_manegment/view/menu_class.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:google_fonts/google_fonts.dart';

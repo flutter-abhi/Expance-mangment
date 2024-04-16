@@ -1,25 +1,23 @@
-import 'package:expance_manegment/home.dart';
-import 'package:expance_manegment/signUp_screen.dart';
+import 'package:expance_manegment/view/home.dart';
+import 'package:expance_manegment/view/login_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-
 import 'package:google_fonts/google_fonts.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class SignUp extends StatefulWidget {
+  const SignUp({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<SignUp> createState() => _LoginPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _LoginPageState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
           padding:
-              const EdgeInsets.only(left: 42, top: 86, right: 38, bottom: 50),
+              const EdgeInsets.only(left: 42, top: 80, right: 38, bottom: 0),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -29,7 +27,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: Image.asset("img/icon.png"),
               ),
               Text(
-                "Login to your Account",
+                "Create your Account",
                 style: GoogleFonts.poppins(
                     fontSize: 16, fontWeight: FontWeight.w500),
               ),
@@ -53,7 +51,32 @@ class _LoginPageState extends State<LoginPage> {
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8),
                             borderSide: BorderSide.none),
-                        hintText: "   Username",
+                        hintText: "name",
+                        hintStyle: GoogleFonts.poppins()),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 25.0),
+                child: Container(
+                  height: 50,
+                  // width: 280,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(8),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Color.fromRGBO(0, 0, 0, 0.15),
+                          offset: Offset(0, 3),
+                          blurRadius: 10,
+                        )
+                      ]),
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(8),
+                            borderSide: BorderSide.none),
+                        hintText: " Username",
                         hintStyle: GoogleFonts.poppins()),
                   ),
                 ),
@@ -74,11 +97,38 @@ class _LoginPageState extends State<LoginPage> {
                         )
                       ]),
                   child: TextFormField(
+                    keyboardType: TextInputType.number,
                     decoration: InputDecoration(
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8),
                             borderSide: BorderSide.none),
-                        hintText: "password",
+                        hintText: " Password",
+                        hintStyle: GoogleFonts.poppins()),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 25.0),
+                child: Container(
+                  height: 50,
+                  // width: 280,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(8),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Color.fromRGBO(0, 0, 0, 0.15),
+                          offset: Offset(0, 3),
+                          blurRadius: 10,
+                        )
+                      ]),
+                  child: TextFormField(
+                    keyboardType: TextInputType.number,
+                    decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(8),
+                            borderSide: BorderSide.none),
+                        hintText: " Confirm Password",
                         hintStyle: GoogleFonts.poppins()),
                   ),
                 ),
@@ -100,7 +150,7 @@ class _LoginPageState extends State<LoginPage> {
                       borderRadius: BorderRadius.circular(8)),
                   child: Center(
                     child: Text(
-                      "Sign in",
+                      "Sign up",
                       style: GoogleFonts.poppins(
                           color: Colors.white,
                           fontSize: 15,
@@ -111,16 +161,16 @@ class _LoginPageState extends State<LoginPage> {
               ),
               //  const Spacer(),
               Padding(
-                padding: const EdgeInsets.only(left: 40, top: 250),
+                padding: const EdgeInsets.only(left: 40, top: 100),
                 child: GestureDetector(
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return const SignUp();
+                      return const LoginPage();
                     }));
                   },
                   child: Text(
-                    "Don’t have an account? Sign up",
+                    "Already have an account? Sign In",
                     style: GoogleFonts.poppins(
                         fontSize: 12, fontWeight: FontWeight.w400),
                   ),

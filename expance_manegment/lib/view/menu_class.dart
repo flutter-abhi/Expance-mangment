@@ -1,7 +1,7 @@
-import 'package:expance_manegment/categories.dart';
-import 'package:expance_manegment/graph_screen.dart';
-import 'package:expance_manegment/home.dart';
-import 'package:expance_manegment/trashScreen.dart';
+import 'package:expance_manegment/view/categories.dart';
+import 'package:expance_manegment/view/graph_screen.dart';
+import 'package:expance_manegment/view/home.dart';
+import 'package:expance_manegment/view/trashScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
